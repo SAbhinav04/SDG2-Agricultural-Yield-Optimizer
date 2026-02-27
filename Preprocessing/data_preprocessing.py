@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler 
 
-df = pd.read_csv("crop_yield_with_crop.csv")
+df = pd.read_csv("/Users/syedadnan/Downloads/Internship/Mini project /SDG2-Agricultural-Yield-Optimizer/Dataset/crop_yield_with_crops.csv")
 
 print(df.isnull().sum())
 print(df.duplicated().sum())
