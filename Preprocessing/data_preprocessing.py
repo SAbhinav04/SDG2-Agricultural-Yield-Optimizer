@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler 
 
-df = pd.read_csv("C:\Users\Vijay kumar\Downloads\crop_yield_with_crops.csv")
+df = pd.read_csv("crop_yield_with_crop.csv")
 
 print(df.isnull().sum())
 print(df.duplicated().sum())
@@ -18,4 +18,6 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # member 4
+pd.DataFrame(X_scaled).to_csv('cleaned_X.csv', index=False) 
+y.to_csv('y.csv', index=False) 
 
