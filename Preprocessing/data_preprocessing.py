@@ -9,6 +9,9 @@ print(df.duplicated().sum())
 print(df.head())
 
 # member 2
+X = df.drop("Yield", axis=1)
+y = df["Yield"]
+X = pd.get_dummies(X, columns=['Crop'], drop_first=True) 
 
 
 
