@@ -7,8 +7,8 @@ import numpy as np
 import joblib
 
 # Load preprocessed feature matrix
-X = pd.read_csv("Preprocessing/cleaned_X.csv")
-y = pd.read_csv("Preprocessing/y.csv")
+X = pd.read_csv("../Preprocessing/cleaned_X.csv")
+y = pd.read_csv("../Preprocessing/y.csv")
 y = y.squeeze()
 
 print("Original Data Shapes:")
@@ -50,13 +50,13 @@ print("Mean Squared Error:", mse)
 print("Root Mean Squared Error:", rmse)
 print("R2 Score:", r2)
 
-joblib.dump(model, "linear_regression_model.pkl")
+joblib.dump(model, "../Models/lr_model.pkl")
 
 results = pd.DataFrame({
     "Actual": y_test,
     "Predicted": y_pred
 })
 
-results.to_csv("linear_regression_predictions.csv", index=False)
+results.to_csv("../Evaluation/lr_results.csv", index=False)
 
 print("\nModel and predictions saved successfully.")
